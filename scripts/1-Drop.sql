@@ -1,0 +1,47 @@
+
+DROP PROCEDURE IF EXISTS dbo.InsertTransactionsAssociative
+GO
+DROP PROCEDURE IF EXISTS dbo.InsertStoresProducts
+GO
+DROP PROCEDURE IF EXISTS dbo.BulkLoad
+GO
+DROP PROCEDURE IF EXISTS dbo.BulkInsert
+GO
+DROP PROCEDURE IF EXISTS dbo.[TimeRangeQuery]
+GO
+DROP PROCEDURE IF EXISTS dbo.[ProductStoreQuery]
+GO
+DROP PROCEDURE IF EXISTS dbo.Dates
+GO
+
+
+
+DROP TABLE IF EXISTS dbo.Associative
+GO
+DROP TABLE IF EXISTS dbo.Transactions
+GO
+DROP TABLE IF EXISTS dbo.Products
+GO
+DROP TABLE IF EXISTS dbo.Products_InMemory
+GO
+DROP TABLE IF EXISTS dbo.Stores
+GO
+DROP TABLE IF EXISTS dbo.Stores_InMemory
+GO
+DROP TABLE IF EXISTS dbo.Dates
+GO
+DROP TABLE IF EXISTS dbo.[Cube]
+GO
+
+
+IF( EXISTS( SELECT * FROM sys.partition_schemes WHERE name = 'ByDateRange' ) )
+BEGIN
+ DROP PARTITION SCHEME ByDateRange
+END
+GO
+
+IF( EXISTS( SELECT * FROM sys.partition_functions WHERE name = 'ByDatePF' ) )
+BEGIN
+ DROP PARTITION FUNCTION ByDatePF
+END
+GO

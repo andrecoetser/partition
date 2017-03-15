@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net452</TargetFramework>
+    <RuntimeIdentifier>win7-x86</RuntimeIdentifier>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore" Version="1.0.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="1.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="1.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="1.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="1.0.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="1.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="wwwroot\index.html" />
+    <None Include="wwwroot\static\css\app.81b712b3866e5ef6361f4e43231d841c.css" />
+    <None Include="wwwroot\static\css\app.81b712b3866e5ef6361f4e43231d841c.css.map" />
+    <None Include="wwwroot\static\js\app.818cd2f6a32c6de71e7e.js" />
+    <None Include="wwwroot\static\js\app.818cd2f6a32c6de71e7e.js.map" />
+    <None Include="wwwroot\static\js\manifest.74529048e2e9dbde95e8.js" />
+    <None Include="wwwroot\static\js\manifest.74529048e2e9dbde95e8.js.map" />
+    <None Include="wwwroot\static\js\vendor.fbbea1e1fbd16f447273.js" />
+    <None Include="wwwroot\static\js\vendor.fbbea1e1fbd16f447273.js.map" />
+  </ItemGroup>
+
+</Project>
